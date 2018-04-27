@@ -15,4 +15,4 @@ services:
     ports:
       - 3000
     labels:
-      convox.cron.loadnewepisodes: * 2 * * ? * npm run serve loadNewEpisodes
+      - convox.cron.loadnewepisodes=* 2 * * ? * npm run serve loadNewEpisodes
