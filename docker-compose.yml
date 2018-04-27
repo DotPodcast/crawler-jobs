@@ -1,0 +1,18 @@
+version: '2'
+services:
+  worker:
+    build: .
+    command: npm run serve stubApi
+    environment:
+      - es_host
+      - es_port=9243
+      - es_protocol=https
+      - es_username
+      - es_password
+      - rabbit_host
+      - rabbit_uriQueue=zonefile_queue
+      - NODE_ENV=production
+    ports:
+      - 3000
+    labels:
+      convox.cron.loadnewepisodes: * 2 * * ? * npm run serve loadNewEpisodes

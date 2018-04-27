@@ -1,0 +1,13 @@
+{
+  "es": {
+    "host": "localhost",
+    "port": 9243,
+    "protocol": "https",
+    "username": "elastic",
+    "password": "changeme"
+  },
+  "rabbit": {
+    "host": "localhost",
+    "uriQueue": "zonefile_queue"
+  }
+}
